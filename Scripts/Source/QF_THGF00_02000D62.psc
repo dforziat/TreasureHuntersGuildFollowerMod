@@ -19,10 +19,12 @@ EndFunction
 Function Fragment_2()
 ;BEGIN CODE
 SetObjectiveCompleted(5)
-
-Stop()
+NextQuest.Start()
+NextQuest.SetStage(5)
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
+
+Quest Property NextQuest  Auto  
