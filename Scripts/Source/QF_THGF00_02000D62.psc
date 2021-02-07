@@ -20,7 +20,7 @@ Function Fragment_2()
 ;BEGIN CODE
 SetObjectiveCompleted(5)
 NextQuest.Start()
-NextQuest.SetStage(5)
+NextQuest.SetStage(1)
 ;END CODE
 EndFunction
 ;END FRAGMENT
