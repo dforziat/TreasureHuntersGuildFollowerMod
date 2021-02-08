@@ -15,6 +15,7 @@ LocationAlias Property Alias_BossLocation Auto
 ;BEGIN FRAGMENT Fragment_0
 Function Fragment_0()
 ;BEGIN CODE
+setObjectiveCompleted(3)
 SetObjectiveDisplayed(5)
 ;END CODE
 EndFunction
