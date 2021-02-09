@@ -1,9 +1,9 @@
-Scriptname THGFitempickup extends ReferenceAlias  
+Scriptname THGFitem02  extends ReferenceAlias  
 
-Quest Property THGF01  Auto  
+Quest Property THGF02  Auto  
 
 Event OnContainerChanged(ObjectReference newContainer, ObjectReference oldContainer)
 	if (newContainer == Game.GetPlayer())
-		THGF01.SetStage(10)
+		THGF02.SetStage(10)
 	endif
 EndEvent
