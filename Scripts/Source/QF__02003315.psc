@@ -1,15 +1,15 @@
 ;BEGIN FRAGMENT CODE - Do not edit anything between this and the end comment
-;NEXT FRAGMENT INDEX 7
+;NEXT FRAGMENT INDEX 8
 Scriptname QF__02003315 Extends Quest Hidden
-
-;BEGIN ALIAS PROPERTY GuildMaster
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_GuildMaster Auto
-;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY TreasureLocation
 ;ALIAS PROPERTY TYPE LocationAlias
 LocationAlias Property Alias_TreasureLocation Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY GuildMaster
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_GuildMaster Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY TreasureContainer
@@ -22,19 +22,18 @@ ReferenceAlias Property Alias_TreasureContainer Auto
 ReferenceAlias Property Alias_Treasure Auto
 ;END ALIAS PROPERTY
 
-;BEGIN FRAGMENT Fragment_5
-Function Fragment_5()
+;BEGIN FRAGMENT Fragment_0
+Function Fragment_0()
 ;BEGIN CODE
-SetObjectiveDisplayed(1)
+SetObjectiveDisplayed(5)
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_0
-Function Fragment_0()
+;BEGIN FRAGMENT Fragment_7
+Function Fragment_7()
 ;BEGIN CODE
-SetObjectiveCompleted(1)
-SetObjectiveDisplayed(5)
+SetObjectiveCompleted(10)
 ;END CODE
 EndFunction
 ;END FRAGMENT
