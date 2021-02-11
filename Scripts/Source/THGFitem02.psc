@@ -4,6 +4,6 @@ Quest Property THGF02  Auto
 
 Event OnContainerChanged(ObjectReference newContainer, ObjectReference oldContainer)
 	if (newContainer == Game.GetPlayer())
-		THGF02.SetStage(10)
+		THGF02.SetStage(7)
 	endif
 EndEvent

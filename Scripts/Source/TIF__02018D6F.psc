@@ -6,7 +6,7 @@ Scriptname TIF__02018D6F Extends TopicInfo Hidden
 Function Fragment_0(ObjectReference akSpeakerRef)
 Actor akSpeaker = akSpeakerRef as Actor
 ;BEGIN CODE
-getOwningQuest().setStage(5)
+getOwningQuest().setStage(3)
 ;END CODE
 EndFunction
 ;END FRAGMENT

@@ -1,15 +1,10 @@
 ;BEGIN FRAGMENT CODE - Do not edit anything between this and the end comment
-;NEXT FRAGMENT INDEX 9
+;NEXT FRAGMENT INDEX 10
 Scriptname QF_THGF01_02000D63 Extends Quest Hidden
 
-;BEGIN ALIAS PROPERTY Object
+;BEGIN ALIAS PROPERTY TreasureContainer
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Object Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Isobel
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Isobel Auto
+ReferenceAlias Property Alias_TreasureContainer Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY TreasureLocation
@@ -22,17 +17,31 @@ LocationAlias Property Alias_TreasureLocation Auto
 ReferenceAlias Property Alias_GuildMaster Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY TreasureContainer
+;BEGIN ALIAS PROPERTY Object
 ;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_TreasureContainer Auto
+ReferenceAlias Property Alias_Object Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Isobel
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Isobel Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN FRAGMENT Fragment_5
 Function Fragment_5()
 ;BEGIN CODE
 SetObjectiveCompleted(10)
+Alias_Isobel.GetActorReference().SetPlayerTeammate(false)
 NextQuest.Start()
-NextQuest.SetStage(5)
+NextQuest.SetStage(1)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_6
+Function Fragment_6()
+;BEGIN CODE
+setObjectiveDisplayed(1)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -46,19 +55,11 @@ SetObjectiveDisplayed(5)
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_6
-Function Fragment_6()
-;BEGIN CODE
-setObjectiveDisplayed(1)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_2
-Function Fragment_2()
+;BEGIN FRAGMENT Fragment_9
+Function Fragment_9()
 ;BEGIN CODE
 SetObjectiveCompleted(5)
-SetObjectiveDisplayed(10)
+SetObjectiveDisplayed(7)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -69,6 +70,15 @@ Function Fragment_8()
 setObjectiveCompleted(1)
 SetObjectiveDisplayed(3)
 Alias_Isobel.GetActorReference().SetPlayerTeammate()
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_2
+Function Fragment_2()
+;BEGIN CODE
+SetObjectiveCompleted(7)
+SetObjectiveDisplayed(10)
 ;END CODE
 EndFunction
 ;END FRAGMENT
