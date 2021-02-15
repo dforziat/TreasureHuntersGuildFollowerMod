@@ -12,14 +12,14 @@ LocationAlias Property Alias_TreasureLocation Auto
 ReferenceAlias Property Alias_TreasureContainer Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Azuk
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Azuk Auto
-;END ALIAS PROPERTY
-
 ;BEGIN ALIAS PROPERTY Treasure
 ;ALIAS PROPERTY TYPE ReferenceAlias
 ReferenceAlias Property Alias_Treasure Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Azuk
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Azuk Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY Isobel
@@ -27,19 +27,13 @@ ReferenceAlias Property Alias_Treasure Auto
 ReferenceAlias Property Alias_Isobel Auto
 ;END ALIAS PROPERTY
 
-;BEGIN FRAGMENT Fragment_12
-Function Fragment_12()
+;BEGIN FRAGMENT Fragment_10
+Function Fragment_10()
 ;BEGIN CODE
-SetObjectiveDisplayed(1)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_8
-Function Fragment_8()
-;BEGIN CODE
-SetObjectiveCompleted(20)
-SetObjectiveDisplayed(30)
+SetObjectiveCompleted(30)
+NextQuest.Start()
+NextQuest.SetStage(1)
+Alias_Isobel.GetActorReference().SetPlayerTeammate(false)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -53,13 +47,10 @@ SetObjectiveDisplayed(20)
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_10
-Function Fragment_10()
+;BEGIN FRAGMENT Fragment_12
+Function Fragment_12()
 ;BEGIN CODE
-SetObjectiveCompleted(30)
-Alias_Isobel.GetActorReference().SetPlayerTeammate(false)
-NextQuest.Start()
-NextQuest.SetStage(1)
+setObjectiveDisplayed(1)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -70,6 +61,15 @@ Function Fragment_7()
 SetObjectiveCompleted(5)
 Alias_Isobel.GetActorReference().SetPlayerTeammate()
 SetObjectiveDisplayed(10)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_8
+Function Fragment_8()
+;BEGIN CODE
+SetObjectiveCompleted(20)
+SetObjectiveDisplayed(30)
 ;END CODE
 EndFunction
 ;END FRAGMENT
