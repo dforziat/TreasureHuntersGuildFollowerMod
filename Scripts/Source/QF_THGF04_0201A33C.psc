@@ -81,8 +81,11 @@ Function Fragment_8()
 ;BEGIN CODE
 SetObjectiveCompleted(40)
 Alias_Isobel.GetActorReference().SetPlayerTeammate(false)
+NextQuest.SetStage(10)
 ;END CODE
 EndFunction
 ;END FRAGMENT
 
 ;END FRAGMENT CODE - Do not edit anything between this and the begin comment
+
+Quest Property NextQuest  Auto  
