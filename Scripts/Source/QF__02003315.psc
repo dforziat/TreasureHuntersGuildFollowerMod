@@ -2,9 +2,9 @@
 ;NEXT FRAGMENT INDEX 12
 Scriptname QF__02003315 Extends Quest Hidden
 
-;BEGIN ALIAS PROPERTY GuildMaster
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_GuildMaster Auto
+;BEGIN ALIAS PROPERTY TreasureLocation
+;ALIAS PROPERTY TYPE LocationAlias
+LocationAlias Property Alias_TreasureLocation Auto
 ;END ALIAS PROPERTY
 
 ;BEGIN ALIAS PROPERTY TreasureContainer
@@ -17,24 +17,15 @@ ReferenceAlias Property Alias_TreasureContainer Auto
 ReferenceAlias Property Alias_Treasure Auto
 ;END ALIAS PROPERTY
 
+;BEGIN ALIAS PROPERTY GuildMaster
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_GuildMaster Auto
+;END ALIAS PROPERTY
+
 ;BEGIN ALIAS PROPERTY Isobel
 ;ALIAS PROPERTY TYPE ReferenceAlias
 ReferenceAlias Property Alias_Isobel Auto
 ;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY TreasureLocation
-;ALIAS PROPERTY TYPE LocationAlias
-LocationAlias Property Alias_TreasureLocation Auto
-;END ALIAS PROPERTY
-
-;BEGIN FRAGMENT Fragment_8
-Function Fragment_8()
-;BEGIN CODE
-SetObjectiveCompleted(5)
-SetObjectiveDisplayed(7)
-;END CODE
-EndFunction
-;END FRAGMENT
 
 ;BEGIN FRAGMENT Fragment_7
 Function Fragment_7()
@@ -43,14 +34,7 @@ SetObjectiveCompleted(10)
 Alias_Isobel.GetActorReference().SetPlayerTeammate(false)
 NextQuest.Start()
 NextQuest.SetStage(1)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_10
-Function Fragment_10()
-;BEGIN CODE
-SetObjectiveDisplayed(3)
+NextQuest.SetActive(true)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -65,11 +49,28 @@ SetObjectiveDisplayed(5)
 EndFunction
 ;END FRAGMENT
 
+;BEGIN FRAGMENT Fragment_8
+Function Fragment_8()
+;BEGIN CODE
+SetObjectiveCompleted(5)
+SetObjectiveDisplayed(7)
+;END CODE
+EndFunction
+;END FRAGMENT
+
 ;BEGIN FRAGMENT Fragment_2
 Function Fragment_2()
 ;BEGIN CODE
 SetObjectiveCompleted(7)
 SetObjectiveDisplayed(10)
+;END CODE
+EndFunction
+;END FRAGMENT
+
+;BEGIN FRAGMENT Fragment_10
+Function Fragment_10()
+;BEGIN CODE
+SetObjectiveDisplayed(3)
 ;END CODE
 EndFunction
 ;END FRAGMENT

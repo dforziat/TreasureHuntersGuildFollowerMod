@@ -21,6 +21,7 @@ Function Fragment_2()
 SetObjectiveCompleted(5)
 NextQuest.Start()
 NextQuest.SetStage(1)
+NextQuest.SetActive(true)
 ;END CODE
 EndFunction
 ;END FRAGMENT
