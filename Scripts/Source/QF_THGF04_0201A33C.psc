@@ -2,6 +2,16 @@
 ;NEXT FRAGMENT INDEX 14
 Scriptname QF_THGF04_0201A33C Extends Quest Hidden
 
+;BEGIN ALIAS PROPERTY Isobel
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Isobel Auto
+;END ALIAS PROPERTY
+
+;BEGIN ALIAS PROPERTY Lever
+;ALIAS PROPERTY TYPE ReferenceAlias
+ReferenceAlias Property Alias_Lever Auto
+;END ALIAS PROPERTY
+
 ;BEGIN ALIAS PROPERTY centurion
 ;ALIAS PROPERTY TYPE ReferenceAlias
 ReferenceAlias Property Alias_centurion Auto
@@ -12,15 +22,16 @@ ReferenceAlias Property Alias_centurion Auto
 ReferenceAlias Property Alias_GuildMaster Auto
 ;END ALIAS PROPERTY
 
-;BEGIN ALIAS PROPERTY Lever
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Lever Auto
-;END ALIAS PROPERTY
-
-;BEGIN ALIAS PROPERTY Isobel
-;ALIAS PROPERTY TYPE ReferenceAlias
-ReferenceAlias Property Alias_Isobel Auto
-;END ALIAS PROPERTY
+;BEGIN FRAGMENT Fragment_0
+Function Fragment_0()
+;BEGIN CODE
+SetObjectiveCompleted(1)
+Alias_Isobel.GetActorReference().SetPlayerTeammate()
+SetObjectiveDisplayed(10)
+BossDoor.Lock(false)
+;END CODE
+EndFunction
+;END FRAGMENT
 
 ;BEGIN FRAGMENT Fragment_10
 Function Fragment_10()
@@ -36,26 +47,6 @@ Function Fragment_8()
 SetObjectiveCompleted(40)
 Alias_Isobel.GetActorReference().SetPlayerTeammate(false)
 NextQuest.SetStage(10)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_0
-Function Fragment_0()
-;BEGIN CODE
-SetObjectiveCompleted(5)
-Alias_Isobel.GetActorReference().SetPlayerTeammate()
-SetObjectiveDisplayed(10)
-BossDoor.Lock(false)
-;END CODE
-EndFunction
-;END FRAGMENT
-
-;BEGIN FRAGMENT Fragment_4
-Function Fragment_4()
-;BEGIN CODE
-SetObjectiveCompleted(20)
-SetObjectiveDisplayed(30)
 ;END CODE
 EndFunction
 ;END FRAGMENT
@@ -78,11 +69,11 @@ setObjectiveDisplayed(40)
 EndFunction
 ;END FRAGMENT
 
-;BEGIN FRAGMENT Fragment_12
-Function Fragment_12()
+;BEGIN FRAGMENT Fragment_4
+Function Fragment_4()
 ;BEGIN CODE
-setObjectiveCompleted(1)
-SetObjectiveDisplayed(5)
+SetObjectiveCompleted(20)
+SetObjectiveDisplayed(30)
 ;END CODE
 EndFunction
 ;END FRAGMENT
