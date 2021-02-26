@@ -7,6 +7,7 @@ Event OnInit()
       Self.GetActorBase().SetInvulnerable()
 	Self.Reset()
 	Self.EnableAI(false)
+	Self.MoveTo(xmarker, abMatchRotation = false)
 EndEvent
 
 Event OnDeath(Actor akKiller)
@@ -18,3 +19,5 @@ EndEvent
 
 
 
+
+ObjectReference Property XMarker  Auto  
